@@ -73,7 +73,17 @@ function init() {
         .then((answers) => {
             console.log('Data saved. Generating team sheet...');
 
-            const manager = new Manager(answers.managerName, answers.)
+            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice)
+            let employees = answers.employees;
+            let engineers = [];
+            let interns = [];
+
+            for (let employee of employees) {
+                if (employee.role === 'Engineer') {
+                    const engineer = new Engineer(employees.role, employees.name, employees.id, employees.email, employees.github);
+                }
+                console.log(employee);
+            }
         })
 }
 
