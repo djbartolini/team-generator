@@ -21,8 +21,8 @@ const generateEngineerCard = (engineers) => {
         <h3>${engineer.role}</h3>
         <ul>
           <li>ID: ${engineer.id}</li>
-          <li>Email: ${engineer.email}</li>
-          <li>GitHub: <a href="#github">${engineer.github}</a></li>
+          <li>Email: <a href="${engineer.email}">${engineer.email}</a></li>
+          <li>GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
         </ul>
       </article>`
 
@@ -40,7 +40,7 @@ const generateInternCard = (interns) => {
         <h3>${intern.role}</h3>
         <ul>
           <li>ID: ${intern.id}</li>
-          <li>Email: ${intern.email}</li>
+          <li>Email: <a href="${intern.email}">${intern.email}</a></li>
           <li>School: ${intern.school}</li>
         </ul>
       </article>`
@@ -74,7 +74,7 @@ const generateHtml = (managerCard, engineerCards, internCards) => {
       }
 
       h3 {
-        font-size: 65%;
+        font-size: 100%;
       }
   
       @media screen and (max-width: 1140px) {
