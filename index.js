@@ -6,7 +6,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-const generateHtml = require('./src/generate-html');
+const { generateManagerCard, generateEngineerCard, generateInternCard, generateHtml } = require('./src/generate-html');
 
 const questions = [{
     type: 'input',
@@ -90,7 +90,14 @@ function init() {
                 }
             }
 
+            const managerCard = generateManagerCard(manager);
+            const engineerCards = generateEngineerCard(engineers);
+            const internCards = generateInternCard(interns);
 
+            const html = generateHtml(managerCard, engineerCards, internCards);
+
+            fs.writeFileSync('./dist/index.html', html, err =>
+                err ? console.error(err) : console.log('Generating your custom team sheet!'));
         })
 }
 

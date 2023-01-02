@@ -1,6 +1,5 @@
-// create the team
 const generateManagerCard = (manager) => {
-    const managerCard = `<article>
+    const managerCard = (`<article>
     <h2>${manager.name}</h2>
     <h3>${manager.getRole()}</h3>
     <ul>
@@ -8,7 +7,7 @@ const generateManagerCard = (manager) => {
       <li>Email: ${manager.email}</li>
       <li>Office Number: ${manager.office}</li>
     </ul>
-    </article>`
+    </article>`)
 
     return managerCard;
 };
@@ -16,7 +15,7 @@ const generateManagerCard = (manager) => {
 const generateEngineerCard = (engineers) => {
     let engineerCards = ``;
 
-    for(engineer of engineers) {
+    for(let engineer of engineers) {
         const engineerCard = `<article>
         <h2>${engineer.name}</h2>
         <h3>${engineer.role}</h3>
@@ -35,7 +34,7 @@ const generateEngineerCard = (engineers) => {
 const generateInternCard = (interns) => {
     let internCards = ``;
 
-    for(intern of intern) {
+    for(let intern of interns) {
         const internCard = `<article>
         <h2>${intern.name}</h2>
         <h3>${intern.role}</h3>
@@ -46,13 +45,13 @@ const generateInternCard = (interns) => {
         </ul>
       </article>`
 
-      engineerCards += engineerCard;
+      internCards += internCard;
     }
-    return engineerCards;
-}
+    return internCards;
+};
 
 // export function to generate entire page
-module.exports = () => {
+const generateHtml = (managerCard, engineerCards, internCards) => {
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -100,5 +99,6 @@ module.exports = () => {
     </footer>
   </body>
   </html>`
-
 };
+
+module.exports = { generateManagerCard, generateEngineerCard, generateInternCard, generateHtml };
