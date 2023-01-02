@@ -2,7 +2,7 @@ const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
     describe('Data', () => {
-        it('should return an object with data including role, name, id, and email when called with the \'new\' keyword', () => {
+        it('should return an object with data for role, name, id, and email when called with the \'new\' keyword', () => {
             const obj = new Employee('Manager', 'Dan', 1, 'dan@email.com');
 
             expect('role' in obj && 'name' in obj && 'id' in obj && 'email' in obj).toEqual(true);
