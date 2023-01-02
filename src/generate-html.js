@@ -1,13 +1,13 @@
 const generateManagerCard = (manager) => {
-    const managerCard = (`<article>
+    const managerCard = `<article>
     <h2>${manager.name}</h2>
     <h3>${manager.getRole()}</h3>
     <ul>
       <li>ID: ${manager.id}</li>
-      <li>Email: ${manager.email}</li>
+      <li>Email: <a href="${manager.email}">${manager.email}</a></li>
       <li>Office Number: ${manager.office}</li>
     </ul>
-    </article>`)
+    </article>`
 
     return managerCard;
 };
@@ -50,7 +50,6 @@ const generateInternCard = (interns) => {
     return internCards;
 };
 
-// export function to generate entire page
 const generateHtml = (managerCard, engineerCards, internCards) => {
   return `<!DOCTYPE html>
   <html lang="en">
@@ -76,7 +75,11 @@ const generateHtml = (managerCard, engineerCards, internCards) => {
       h3 {
         font-size: 100%;
       }
-  
+
+      article {
+        min-width: 250px;
+      }
+
       @media screen and (max-width: 1140px) {
         main {
           grid-template-columns: 1fr 1fr;
