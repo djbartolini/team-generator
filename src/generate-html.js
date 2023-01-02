@@ -72,6 +72,10 @@ const generateHtml = (managerCard, engineerCards, internCards) => {
         max-width: 1140px;
         margin: auto;
       }
+
+      h3 {
+        font-size: 65%;
+      }
   
       @media screen and (max-width: 1140px) {
         main {
