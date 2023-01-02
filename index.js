@@ -6,6 +6,8 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const generateHtml = require('./src/generate-html');
+
 const questions = [{
     type: 'input',
     message: 'NAME: What is the manager\'s name?',
@@ -73,7 +75,7 @@ function init() {
         .then((answers) => {
             console.log('Data saved. Generating team sheet...');
 
-            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice)
+            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice);
             let employees = answers.employees;
             let engineers = [];
             let interns = [];
@@ -81,9 +83,14 @@ function init() {
             for (let employee of employees) {
                 if (employee.role === 'Engineer') {
                     const engineer = new Engineer(employees.role, employees.name, employees.id, employees.email, employees.github);
+                    engineers.push(employee);
+                } else if (employee.role === 'Intern') {
+                    const intern = new Intern(employees.role, employees.name, employees.id, employees.email, employees.school);
+                    interns.push(employee);
                 }
-                console.log(employee);
             }
+
+
         })
 }
 
