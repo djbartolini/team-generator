@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTER PAGE TITLE HERE</title>
+    <!-- Minified version -->
+    <style>
+      @import "https://cdn.simplecss.org/simple.min.css";
+  
+      main {
+        display: grid;
+        grid-column: 1/-1;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        max-width: 1140px;
+        margin: auto;
+      }
+
+      h3 {
+        font-size: 100%;
+      }
+
+      article {
+        min-width: 250px;
+      }
+
+      @media screen and (max-width: 1140px) {
+        main {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media screen and (max-width: 720px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Team</h1>
+    </header>
+    <main>
+      <article>
+    <h2>Cloud</h2>
+    <h3>Manager</h3>
+    <ul>
+      <li>ID: 1</li>
+      <li>Email: <a href="cloud@email.com">cloud@email.com</a></li>
+      <li>Office Number: 123</li>
+    </ul>
+    </article>
+      <article>
+        <h2>Tifa</h2>
+        <h3>Engineer</h3>
+        <ul>
+          <li>ID: 2</li>
+          <li>Email: <a href="tifa@email.com">tifa@email.com</a></li>
+          <li>GitHub: <a href="https://github.com/tifalockhart">tifalockhart</a></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Barrett</h2>
+        <h3>Intern</h3>
+        <ul>
+          <li>ID: 3</li>
+          <li>Email: <a href="barrett@email.com">barrett@email.com</a></li>
+          <li>School: Avalanche</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      &copy; 2022-2023
+    </footer>
+  </body>
+  </html>
