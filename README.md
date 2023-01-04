@@ -1,6 +1,6 @@
 # Team Sheet Generator
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Desciption
   Team sheet generator is a program that runs in the command line via node.js that accepts user input to create an html document that displays the user's team. It can be cloned into your local machine here: https://github.com/djbartolini/team-generator
@@ -29,4 +29,4 @@
   This app is covered under the MIT license: [MIT](https://opensource.org/licenses/MIT)
 
   ## Support
-  If you encounter problems with this README generator, please reach out to me on GitHub at: https://github.com/djbartolini, or email me at dan.barto@gmail.com
+  If you encounter problems with this app, please reach out to me on GitHub at: https://github.com/djbartolini, or email me at dan.barto@gmail.com.
